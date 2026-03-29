@@ -11,6 +11,7 @@ import {
   PeerRadarChart,
 } from '@/components/LiquidityCharts'
 import InsightsSection from '@/components/InsightsSection'
+import ConversionSection from '@/components/ConversionSection'
 
 function Skeleton() {
   return (
@@ -129,17 +130,8 @@ export default function ResultsPage({ params }: { params: { ticker: string } }) 
               <InsightsSection tokenData={data} />
             </section>
 
-            <section
-              className="rounded-xl p-8 text-center"
-              style={{ backgroundColor: '#162040' }}
-            >
-              <h2 className="text-white text-2xl font-bold mb-2">
-                Liquidity Without Compromise
-              </h2>
-              <p className="text-gray-400 mb-6">
-                Portofino provides institutional market making for tokens like {ticker}. No loans, no token options — just performance.
-              </p>
-              <p className="text-gray-500 text-sm">Conversion engine coming in Phase 3.</p>
+            <section>
+              <ConversionSection ticker={ticker} tokenData={data} />
             </section>
           </>
         )}
