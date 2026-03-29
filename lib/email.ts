@@ -50,8 +50,8 @@ function buildProspectEmail(lead: LeadData, termSheet: TermSheetData): string {
         
         <!-- Header -->
         <tr>
-          <td style="background:#0D1B3E;padding:24px 32px;">
-            <span style="color:white;font-size:20px;font-weight:700;letter-spacing:4px;">PORTOFINO</span>
+          <td style="background:#0D1B3E;padding:24px 32px;border-bottom:3px solid #0099CC;">
+            <span style="color:white;font-size:22px;font-weight:700;letter-spacing:6px;font-family:Georgia,serif;">PORTOFINO<sup style="font-size:11px;color:#0099CC;">s</sup></span>
           </td>
         </tr>
 
@@ -96,7 +96,7 @@ function buildProspectEmail(lead: LeadData, termSheet: TermSheetData): string {
             <!-- CTA -->
             <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">
               <tr><td align="center">
-                <a href="https://calendly.com/portofino" style="display:inline-block;background:#1D6E73;color:white;text-decoration:none;padding:14px 32px;border-radius:8px;font-weight:600;font-size:15px;">
+                <a href="https://calendly.com/portofino" style="display:inline-block;background:#0099CC;color:white;text-decoration:none;padding:14px 32px;border-radius:8px;font-weight:600;font-size:15px;">
                   Book a 30-Min Call to Discuss
                 </a>
               </td></tr>
@@ -115,7 +115,7 @@ function buildProspectEmail(lead: LeadData, termSheet: TermSheetData): string {
         <tr>
           <td style="background:#f8f9fa;padding:16px 32px;text-align:center;">
             <p style="color:#9ca3af;font-size:12px;margin:0;">
-              contact@portofino.tech | <a href="https://portofino.tech" style="color:#1D6E73;">portofino.tech</a>
+              contact@portofino.tech | <a href="https://portofino.tech" style="color:#0099CC;">portofino.tech</a>
             </p>
           </td>
         </tr>

@@ -11,7 +11,7 @@ interface Insight {
 const severityConfig = {
   high: { color: '#C0392B', label: 'HIGH SEVERITY' },
   medium: { color: '#C47A1A', label: 'MEDIUM' },
-  low: { color: '#1D6E73', label: 'LOW' },
+  low: { color: '#0099CC', label: 'LOW' },
 }
 
 export default function InsightsSection({ tokenData }: { tokenData: any }) {
@@ -45,7 +45,7 @@ export default function InsightsSection({ tokenData }: { tokenData: any }) {
 
       {loading && (
         <div className="flex items-center gap-3 text-gray-400">
-          <div className="w-5 h-5 border-2 border-teal-500 border-t-transparent rounded-full animate-spin" style={{ borderColor: '#1D6E73', borderTopColor: 'transparent' }} />
+          <div className="w-5 h-5 border-2 border-teal-500 border-t-transparent rounded-full animate-spin" style={{ borderColor: '#0099CC', borderTopColor: 'transparent' }} />
           <span>Generating AI insights...</span>
         </div>
       )}

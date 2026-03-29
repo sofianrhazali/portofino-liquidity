@@ -1,8 +1,13 @@
 import type { Metadata } from 'next'
-import { DM_Sans } from 'next/font/google'
+import { DM_Sans, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 
-const dmSans = DM_Sans({ subsets: ['latin'] })
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' })
+const cormorant = Cormorant_Garamond({ 
+  subsets: ['latin'], 
+  weight: ['400', '600', '700'],
+  variable: '--font-serif'
+})
 
 export const metadata: Metadata = {
   title: 'Portofino Liquidity Check',
@@ -16,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={dmSans.className}>{children}</body>
+      <body className={`${dmSans.variable} ${cormorant.variable} ${dmSans.className}`}>{children}</body>
     </html>
   )
 }

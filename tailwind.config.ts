@@ -10,10 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         navy: '#0D1B3E',
-        teal: '#1D6E73',
+        cyan: '#0099CC',
+        'cyan-dark': '#007AAA',
+        'navy-card': '#162040',
+        'navy-input': '#0A1628',
       },
       fontFamily: {
         sans: ['DM Sans', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
       },
     },
   },

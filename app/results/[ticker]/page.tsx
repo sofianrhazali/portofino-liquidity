@@ -59,10 +59,11 @@ export default function ResultsPage({ params }: { params: { ticker: string } }) 
       {/* Nav */}
       <nav className="px-8 py-6 flex items-center justify-between border-b border-white/10">
         <span
-          className="text-white text-xl font-semibold tracking-widest uppercase cursor-pointer"
+          className="text-white text-2xl tracking-widest uppercase cursor-pointer"
+          style={{ fontFamily: 'var(--font-serif)', fontWeight: 600, letterSpacing: '0.2em' }}
           onClick={() => router.push('/')}
         >
-          Portofino
+          PORTOFINO<sup className="text-xs" style={{ color: '#0099CC' }}>s</sup>
         </span>
         <button
           onClick={() => router.push('/')}

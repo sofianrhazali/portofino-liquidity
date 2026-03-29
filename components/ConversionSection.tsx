@@ -58,7 +58,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
   if (success) {
     return (
       <div className="rounded-xl p-10 text-center" style={{ backgroundColor: '#162040' }}>
-        <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#1D6E73' }}>
+        <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#0099CC' }}>
           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
@@ -74,7 +74,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 rounded-xl text-white font-semibold"
-            style={{ backgroundColor: '#1D6E73' }}
+            style={{ backgroundColor: '#0099CC' }}
           >
             Book a Call Now
           </a>
@@ -104,20 +104,20 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
               'No hidden fees',
             ].map((point) => (
               <div key={point} className="flex items-start gap-3">
-                <span style={{ color: '#1D6E73' }} className="mt-0.5 text-lg">✓</span>
+                <span style={{ color: '#0099CC' }} className="mt-0.5 text-lg">✓</span>
                 <span className="text-gray-300">{point}</span>
               </div>
             ))}
           </div>
 
           {/* Fee box */}
-          <div className="rounded-xl p-6 mb-6" style={{ backgroundColor: '#1D6E73' }}>
+          <div className="rounded-xl p-6 mb-6" style={{ backgroundColor: '#0099CC' }}>
             <p className="text-white font-bold text-lg">$7,500 / month — first exchange</p>
             <p className="text-white/80 mt-1">$2,500 / month — each additional exchange</p>
           </div>
 
           {/* Pull quote */}
-          <p className="text-gray-400 italic text-sm border-l-2 pl-4" style={{ borderColor: '#1D6E73' }}>
+          <p className="text-gray-400 italic text-sm border-l-2 pl-4" style={{ borderColor: '#0099CC' }}>
             "Liquidity is more than numbers on a screen — it is confidence, credibility, and velocity."
           </p>
         </div>
@@ -135,7 +135,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
             target="_blank"
             rel="noopener noreferrer"
             className="text-teal-400 font-semibold hover:underline"
-            style={{ color: '#1D6E73' }}
+            style={{ color: '#0099CC' }}
           >
             Book a call →
           </a>
@@ -151,7 +151,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold hover:underline"
-            style={{ color: '#1D6E73' }}
+            style={{ color: '#0099CC' }}
           >
             Talk to our Pre-TGE team →
           </a>
@@ -198,7 +198,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
               onClick={() => handleSubmit('retainer')}
               disabled={!!loading}
               className="w-full py-4 rounded-xl text-white font-semibold text-base flex items-center justify-center gap-2 transition-opacity hover:opacity-90 disabled:opacity-60"
-              style={{ backgroundColor: '#1D6E73' }}
+              style={{ backgroundColor: '#0099CC' }}
             >
               {loading === 'retainer' && (
                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -209,7 +209,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
               onClick={() => handleSubmit('call_option')}
               disabled={!!loading}
               className="w-full py-4 rounded-xl text-white font-semibold text-base flex items-center justify-center gap-2 transition-opacity hover:opacity-90 disabled:opacity-60"
-              style={{ border: '1px solid #1D6E73', backgroundColor: 'transparent' }}
+              style={{ border: '1px solid #0099CC', backgroundColor: 'transparent' }}
             >
               {loading === 'call_option' && (
                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />

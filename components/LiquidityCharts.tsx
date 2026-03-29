@@ -48,11 +48,11 @@ export function TradingVolumeChart({ data }: { data: VolumePoint[] }) {
           />
           <Tooltip
             formatter={(v: number) => [formatM(v), 'Volume']}
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #1D6E73', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
-            itemStyle={{ color: '#1D6E73' }}
+            itemStyle={{ color: '#0099CC' }}
           />
-          <Bar dataKey="volume" fill="#1D6E73" radius={[2, 2, 0, 0]} />
+          <Bar dataKey="volume" fill="#0099CC" radius={[2, 2, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </ChartCard>
@@ -69,11 +69,11 @@ export function LiquidityByExchangeChart({ data }: { data: Exchange[] }) {
           <YAxis type="category" dataKey="name" tick={{ fill: '#9ca3af', fontSize: 10 }} axisLine={false} tickLine={false} width={80} />
           <Tooltip
             formatter={(v: number) => [formatM(v), 'Depth']}
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #1D6E73', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
-            itemStyle={{ color: '#1D6E73' }}
+            itemStyle={{ color: '#0099CC' }}
           />
-          <Bar dataKey="depth2Percent" fill="#0D1B3E" stroke="#1D6E73" strokeWidth={1} radius={[0, 4, 4, 0]} />
+          <Bar dataKey="depth2Percent" fill="#0D1B3E" stroke="#0099CC" strokeWidth={1} radius={[0, 4, 4, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </ChartCard>
@@ -90,7 +90,7 @@ export function VolumeByExchangeChart({ data }: { data: Exchange[] }) {
           <YAxis type="category" dataKey="name" tick={{ fill: '#9ca3af', fontSize: 10 }} axisLine={false} tickLine={false} width={80} />
           <Tooltip
             formatter={(v: number) => [formatM(v), 'Volume']}
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #1D6E73', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
             itemStyle={{ color: '#22543d' }}
           />
@@ -131,10 +131,10 @@ export function OrderBookChart({ data }: { data: VolumePoint[] }) {
           />
           <Tooltip
             formatter={(v: number) => [`$${Math.abs(v).toLocaleString()}`, v > 0 ? 'Bid Depth' : 'Ask Depth']}
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #1D6E73', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
           />
-          <Bar dataKey="bid" fill="#1D6E73" radius={[2, 2, 0, 0]} />
+          <Bar dataKey="bid" fill="#0099CC" radius={[2, 2, 0, 0]} />
           <Bar dataKey="ask" fill="#C0392B" radius={[0, 0, 2, 2]} />
         </BarChart>
       </ResponsiveContainer>
@@ -177,7 +177,7 @@ export function PeerRadarChart({
             wrapperStyle={{ color: '#9ca3af', fontSize: 12 }}
           />
           <Tooltip
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #1D6E73', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
           />
         </RadarChart>
