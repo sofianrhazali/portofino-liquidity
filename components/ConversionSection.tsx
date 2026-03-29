@@ -170,7 +170,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
             value={name}
             onChange={e => setName(e.target.value)}
             className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none focus:ring-2"
-            style={{ backgroundColor: '#0D1B3E', border: '1px solid #1e3a5f', focusRingColor: '#1D6E73' }}
+            style={{ backgroundColor: '#0D1B3E', border: '1px solid #1e3a5f' }}
           />
           <input
             type="email"
