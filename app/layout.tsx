@@ -1,10 +1,14 @@
 import type { Metadata } from 'next'
-import { DM_Sans, Cormorant_Garamond } from 'next/font/google'
+import { Poppins, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' })
-const cormorant = Cormorant_Garamond({ 
+const poppins = Poppins({ 
   subsets: ['latin'], 
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-sans' 
+})
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
   weight: ['400', '600', '700'],
   variable: '--font-serif'
 })
@@ -21,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${cormorant.variable} ${dmSans.className}`}>{children}</body>
+      <body className={`${poppins.variable} ${playfair.variable} ${poppins.className}`}>{children}</body>
     </html>
   )
 }

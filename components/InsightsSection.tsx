@@ -63,7 +63,7 @@ export default function InsightsSection({ tokenData }: { tokenData: any }) {
                 key={i}
                 className="rounded-xl p-5"
                 style={{
-                  backgroundColor: '#162040',
+                  backgroundColor: '#1E2436',
                   borderLeft: `4px solid ${config.color}`,
                 }}
               >

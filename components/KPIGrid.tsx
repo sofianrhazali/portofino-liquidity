@@ -52,7 +52,7 @@ function KPICard({ label, value, isPercent, rawValue }: KPICardProps) {
   return (
     <div
       className="rounded-xl p-4 flex flex-col gap-1"
-      style={{ backgroundColor: '#162040' }}
+      style={{ backgroundColor: '#1E2436' }}
     >
       <span className="text-xl font-bold" style={{ color }}>
         {value}

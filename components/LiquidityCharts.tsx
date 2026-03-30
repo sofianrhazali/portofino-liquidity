@@ -18,7 +18,7 @@ function formatM(val: number) {
 
 function ChartCard({ title, children, note }: { title: string; children: React.ReactNode; note?: string }) {
   return (
-    <div className="rounded-xl p-5" style={{ backgroundColor: '#162040' }}>
+    <div className="rounded-xl p-5" style={{ backgroundColor: '#1E2436' }}>
       <h3 className="text-white font-semibold text-base mb-4">{title}</h3>
       {children}
       {note && <p className="text-gray-500 text-xs mt-2">{note}</p>}
@@ -48,7 +48,7 @@ export function TradingVolumeChart({ data }: { data: VolumePoint[] }) {
           />
           <Tooltip
             formatter={(v: number) => [formatM(v), 'Volume']}
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#161B28', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
             itemStyle={{ color: '#0099CC' }}
           />
@@ -69,11 +69,11 @@ export function LiquidityByExchangeChart({ data }: { data: Exchange[] }) {
           <YAxis type="category" dataKey="name" tick={{ fill: '#9ca3af', fontSize: 10 }} axisLine={false} tickLine={false} width={80} />
           <Tooltip
             formatter={(v: number) => [formatM(v), 'Depth']}
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#161B28', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
             itemStyle={{ color: '#0099CC' }}
           />
-          <Bar dataKey="depth2Percent" fill="#0D1B3E" stroke="#0099CC" strokeWidth={1} radius={[0, 4, 4, 0]} />
+          <Bar dataKey="depth2Percent" fill="#161B28" stroke="#0099CC" strokeWidth={1} radius={[0, 4, 4, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </ChartCard>
@@ -90,7 +90,7 @@ export function VolumeByExchangeChart({ data }: { data: Exchange[] }) {
           <YAxis type="category" dataKey="name" tick={{ fill: '#9ca3af', fontSize: 10 }} axisLine={false} tickLine={false} width={80} />
           <Tooltip
             formatter={(v: number) => [formatM(v), 'Volume']}
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#161B28', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
             itemStyle={{ color: '#22543d' }}
           />
@@ -131,7 +131,7 @@ export function OrderBookChart({ data }: { data: VolumePoint[] }) {
           />
           <Tooltip
             formatter={(v: number) => [`$${Math.abs(v).toLocaleString()}`, v > 0 ? 'Bid Depth' : 'Ask Depth']}
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#161B28', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
           />
           <Bar dataKey="bid" fill="#0099CC" radius={[2, 2, 0, 0]} />
@@ -177,7 +177,7 @@ export function PeerRadarChart({
             wrapperStyle={{ color: '#9ca3af', fontSize: 12 }}
           />
           <Tooltip
-            contentStyle={{ backgroundColor: '#0D1B3E', border: '1px solid #0099CC', borderRadius: 8 }}
+            contentStyle={{ backgroundColor: '#161B28', border: '1px solid #0099CC', borderRadius: 8 }}
             labelStyle={{ color: '#9ca3af' }}
           />
         </RadarChart>

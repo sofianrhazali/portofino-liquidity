@@ -9,15 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: '#0D1B3E',
+        navy: '#161B28',
         cyan: '#0099CC',
         'cyan-dark': '#007AAA',
-        'navy-card': '#162040',
-        'navy-input': '#0A1628',
+        'navy-card': '#1E2436',
+        'navy-input': '#12172200',
       },
       fontFamily: {
-        sans: ['DM Sans', 'sans-serif'],
-        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        sans: ['var(--font-sans)', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
       },
     },
   },

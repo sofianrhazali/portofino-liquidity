@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 export default function Home() {
   const [ticker, setTicker] = useState('')
@@ -15,14 +16,10 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col" style={{ backgroundColor: '#0D1B3E' }}>
+    <main className="min-h-screen flex flex-col" style={{ backgroundColor: '#161B28' }}>
       {/* Nav */}
       <nav className="px-8 py-6 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="text-white text-2xl tracking-widest uppercase" style={{ fontFamily: 'var(--font-serif)', fontWeight: 600, letterSpacing: '0.2em' }}>
-            PORTOFINO<sup className="text-xs" style={{ color: '#0099CC' }}>s</sup>
-          </span>
-        </div>
+        <Image src="/logo.png" alt="Portofino" width={180} height={40} style={{ objectFit: 'contain' }} />
         <a href="https://portofino.tech" className="text-gray-400 text-sm hover:text-white transition-colors">
           portofino.tech →
         </a>
@@ -30,8 +27,7 @@ export default function Home() {
 
       {/* Hero */}
       <div className="flex-1 flex flex-col items-center justify-center px-4 text-center">
-        {/* Eyebrow */}
-        <p className="text-xs uppercase tracking-widest mb-6" style={{ color: '#0099CC' }}>
+        <p className="text-xs uppercase tracking-widest mb-6 font-medium" style={{ color: '#0099CC' }}>
           Institutional Liquidity Analysis
         </p>
 
@@ -48,10 +44,9 @@ export default function Home() {
             value={ticker}
             onChange={(e) => setTicker(e.target.value)}
             placeholder="Enter ticker (e.g. OSMO, AXL, ONDO)"
-            className="w-full px-5 py-4 rounded-xl text-lg mb-4 outline-none"
+            className="w-full px-5 py-4 rounded-xl text-lg mb-4 outline-none text-white placeholder-gray-500"
             style={{ 
-              backgroundColor: '#162040', 
-              color: 'white',
+              backgroundColor: '#1E2436',
               border: '1px solid rgba(0,153,204,0.3)',
             }}
           />

@@ -57,7 +57,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
 
   if (success) {
     return (
-      <div className="rounded-xl p-10 text-center" style={{ backgroundColor: '#162040' }}>
+      <div className="rounded-xl p-10 text-center" style={{ backgroundColor: '#1E2436' }}>
         <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#0099CC' }}>
           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -91,7 +91,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
 
       {/* Part A — Retainer Offer */}
       {(segment === 'smb' || segment === 'small') && (
-        <div className="rounded-xl p-8" style={{ backgroundColor: '#162040' }}>
+        <div className="rounded-xl p-8" style={{ backgroundColor: '#1E2436' }}>
           <h2 className="text-white text-2xl font-bold mb-6">Liquidity Without Compromise</h2>
           <div className="space-y-3 mb-8">
             {[
@@ -125,7 +125,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
 
       {/* Enterprise CTA */}
       {segment === 'enterprise' && (
-        <div className="rounded-xl p-8 text-center" style={{ backgroundColor: '#162040' }}>
+        <div className="rounded-xl p-8 text-center" style={{ backgroundColor: '#1E2436' }}>
           <h2 className="text-white text-2xl font-bold mb-3">Enterprise Programme</h2>
           <p className="text-gray-400 mb-6">
             Your token profile qualifies for our Enterprise programme.
@@ -144,7 +144,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
 
       {/* Pre-TGE CTA */}
       {segment === 'pre-tge' && (
-        <div className="rounded-xl p-8 text-center" style={{ backgroundColor: '#162040' }}>
+        <div className="rounded-xl p-8 text-center" style={{ backgroundColor: '#1E2436' }}>
           <h2 className="text-white text-2xl font-bold mb-3">Launching Soon?</h2>
           <a
             href="https://calendly.com/portofino"
@@ -159,7 +159,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
       )}
 
       {/* Part B — Email Gate */}
-      <div className="rounded-xl p-8" style={{ backgroundColor: '#162040' }}>
+      <div className="rounded-xl p-8" style={{ backgroundColor: '#1E2436' }}>
         <h2 className="text-white text-2xl font-bold mb-1">Get Your Full Report + Indicative Term Sheet</h2>
         <p className="text-gray-400 mb-6">Free. Sent to your inbox in under 60 seconds.</p>
 
@@ -170,7 +170,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
             value={name}
             onChange={e => setName(e.target.value)}
             className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none focus:ring-2"
-            style={{ backgroundColor: '#0D1B3E', border: '1px solid #1e3a5f' }}
+            style={{ backgroundColor: '#161B28', border: '1px solid #1e3a5f' }}
           />
           <input
             type="email"
@@ -178,7 +178,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
             value={email}
             onChange={e => setEmail(e.target.value)}
             className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none"
-            style={{ backgroundColor: '#0D1B3E', border: '1px solid #1e3a5f' }}
+            style={{ backgroundColor: '#161B28', border: '1px solid #1e3a5f' }}
           />
           <input
             type="text"
@@ -186,7 +186,7 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
             value={projectName}
             onChange={e => setProjectName(e.target.value)}
             className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none"
-            style={{ backgroundColor: '#0D1B3E', border: '1px solid #1e3a5f' }}
+            style={{ backgroundColor: '#161B28', border: '1px solid #1e3a5f' }}
           />
         </div>
 
