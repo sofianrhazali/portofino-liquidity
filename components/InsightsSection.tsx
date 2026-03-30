@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 interface Insight {
   title: string
   insight: string
+  portofino: string
   severity: 'high' | 'medium' | 'low'
 }
 
@@ -61,7 +62,7 @@ export default function InsightsSection({ tokenData }: { tokenData: any }) {
             return (
               <div
                 key={i}
-                className="rounded-xl p-5"
+                className="rounded-xl p-5 flex flex-col"
                 style={{
                   backgroundColor: '#1E2436',
                   borderLeft: `4px solid ${config.color}`,
@@ -74,7 +75,12 @@ export default function InsightsSection({ tokenData }: { tokenData: any }) {
                   {config.label}
                 </span>
                 <h3 className="text-white font-bold text-base mb-2">{insight.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{insight.insight}</p>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">{insight.insight}</p>
+                <div className="mt-auto pt-3 border-t border-white/10">
+                  <p className="text-xs font-medium" style={{ color: '#0099CC' }}>
+                    → {insight.portofino}
+                  </p>
+                </div>
               </div>
             )
           })}

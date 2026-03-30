@@ -34,7 +34,8 @@ Return ONLY a valid JSON array with exactly 3 objects. No markdown, no explanati
 [
   {
     "title": "5 words max, punchy problem statement",
-    "insight": "Two sentences. First sentence states the specific problem with numbers. Second sentence states the commercial consequence.",
+    "insight": "1-2 sentences maximum. State the specific problem with numbers and its commercial consequence. Be direct and sharp.",
+    "portofino": "One short sentence explaining exactly how Portofino can fix this specific issue.",
     "severity": "high" or "medium" or "low"
   }
 ]`,
