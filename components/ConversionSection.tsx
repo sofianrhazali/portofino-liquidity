@@ -97,12 +97,12 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
             {/* Left — headline + bullets */}
             <div className="flex-1">
               <h2 className="text-white text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>Liquidity Without Compromise</h2>
-              <div className="space-y-3 mb-6">
+              <div className="space-y-3">
                 {[
                   'Deep two-way order books on your key exchanges',
                   '95% uptime guarantee with monthly reporting',
                   '50% profit share on market making revenues',
-                  'You control inventory — we never hold your tokens',
+                  'You control the inventory through sub-accounts directly set up with the exchanges',
                   'Restricted API only — zero withdrawal rights',
                   'No loan, no options, no complexity',
                   'No hidden fees',
@@ -113,22 +113,18 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
                   </div>
                 ))}
               </div>
-              <p className="text-gray-400 italic text-sm border-l-2 pl-4" style={{ borderColor: '#0099CC' }}>
-                "Liquidity is more than numbers on a screen — it is confidence, credibility, and velocity."
-              </p>
             </div>
 
-            {/* Right — pricing */}
-            <div className="md:w-72 flex flex-col gap-4">
+            {/* Right — pricing (single card) */}
+            <div className="md:w-56 flex flex-col gap-3">
               <div className="rounded-xl p-6" style={{ backgroundColor: '#0099CC' }}>
-                <p className="text-white/70 text-xs uppercase tracking-widest mb-3 font-medium">First exchange</p>
+                <p className="text-white/70 text-xs uppercase tracking-widest mb-2 font-medium">First exchange</p>
                 <p className="text-white font-bold text-3xl mb-1">$7,500</p>
-                <p className="text-white/80 text-sm">per month</p>
-              </div>
-              <div className="rounded-xl p-6" style={{ backgroundColor: '#162030', border: '1px solid #0099CC44' }}>
-                <p className="text-white/70 text-xs uppercase tracking-widest mb-3 font-medium">Each additional exchange</p>
-                <p className="text-white font-bold text-3xl mb-1">$2,500</p>
-                <p className="text-white/80 text-sm">per month</p>
+                <p className="text-white/80 text-sm mb-4">per month</p>
+                <div className="border-t border-white/20 pt-3">
+                  <p className="text-white/70 text-xs mb-1">+ Each additional exchange</p>
+                  <p className="text-white font-bold text-lg">$2,500 <span className="text-white/70 text-xs font-normal">/ month</span></p>
+                </div>
               </div>
               <p className="text-gray-500 text-xs text-center">No lock-in. Cancel anytime.</p>
             </div>
@@ -141,16 +137,8 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
       {segment === 'enterprise' && (
         <div className="rounded-xl p-8 text-center" style={{ backgroundColor: '#1E2436' }}>
           <h2 className="text-white text-2xl font-bold mb-3">Enterprise Programme</h2>
-          <p className="text-gray-400 mb-6">
-            Your token profile qualifies for our Enterprise programme.
-          </p>
-          <a
-            href="https://calendly.com/portofino"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-teal-400 font-semibold hover:underline"
-            style={{ color: '#0099CC' }}
-          >
+          <p className="text-gray-400 mb-6">Your token profile qualifies for our Enterprise programme.</p>
+          <a href="https://calendly.com/portofino" target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline" style={{ color: '#0099CC' }}>
             Book a call →
           </a>
         </div>
@@ -160,82 +148,74 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
       {segment === 'pre-tge' && (
         <div className="rounded-xl p-8 text-center" style={{ backgroundColor: '#1E2436' }}>
           <h2 className="text-white text-2xl font-bold mb-3">Launching Soon?</h2>
-          <a
-            href="https://calendly.com/portofino"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold hover:underline"
-            style={{ color: '#0099CC' }}
-          >
+          <a href="https://calendly.com/portofino" target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline" style={{ color: '#0099CC' }}>
             Talk to our Pre-TGE team →
           </a>
         </div>
       )}
 
-      {/* Part B — Email Gate */}
+      {/* Part B — Email Gate: two-column layout */}
       <div className="rounded-xl p-8" style={{ backgroundColor: '#1E2436' }}>
-        <h2 className="text-white text-2xl font-bold mb-1">Get Your Full Report + Indicative Term Sheet</h2>
+        <h2 className="text-white text-2xl font-bold mb-1" style={{ fontFamily: 'var(--font-serif)' }}>Get Your Full Report + Indicative Term Sheet</h2>
         <p className="text-gray-400 mb-6">Free. Sent to your inbox in under 60 seconds.</p>
 
-        <div className="space-y-4 mb-6">
-          <input
-            type="text"
-            placeholder="Jane Smith"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none focus:ring-2"
-            style={{ backgroundColor: '#161B28', border: '1px solid #1e3a5f' }}
-          />
-          <input
-            type="email"
-            placeholder="jane@yourproject.xyz"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none"
-            style={{ backgroundColor: '#161B28', border: '1px solid #1e3a5f' }}
-          />
-          <input
-            type="text"
-            placeholder="Project name"
-            value={projectName}
-            onChange={e => setProjectName(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none"
-            style={{ backgroundColor: '#161B28', border: '1px solid #1e3a5f' }}
-          />
-        </div>
+        <div className="flex flex-col md:flex-row gap-8">
 
-        {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
-
-        {segment !== 'enterprise' && segment !== 'pre-tge' && (
-          <div className="space-y-3">
-            <button
-              onClick={() => handleSubmit('retainer')}
-              disabled={!!loading}
-              className="w-full py-4 rounded-xl text-white font-semibold text-base flex items-center justify-center gap-2 transition-opacity hover:opacity-90 disabled:opacity-60"
-              style={{ backgroundColor: '#0099CC' }}
-            >
-              {loading === 'retainer' && (
-                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              )}
-              Send Me the Retainer Term Sheet — $7,500/mo
-            </button>
-            <button
-              onClick={() => handleSubmit('call_option')}
-              disabled={!!loading}
-              className="w-full py-4 rounded-xl text-white font-semibold text-base flex items-center justify-center gap-2 transition-opacity hover:opacity-90 disabled:opacity-60"
-              style={{ border: '1px solid #0099CC', backgroundColor: 'transparent' }}
-            >
-              {loading === 'call_option' && (
-                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              )}
-              Send Me the Call Option Term Sheet
-            </button>
+          {/* Left — form fields */}
+          <div className="flex-1 space-y-4">
+            <input
+              type="text"
+              placeholder="Jane Smith"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none"
+              style={{ backgroundColor: '#161B28', border: '1px solid #1e3a5f' }}
+            />
+            <input
+              type="email"
+              placeholder="jane@yourproject.xyz"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none"
+              style={{ backgroundColor: '#161B28', border: '1px solid #1e3a5f' }}
+            />
+            <input
+              type="text"
+              placeholder="Project name"
+              value={projectName}
+              onChange={e => setProjectName(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none"
+              style={{ backgroundColor: '#161B28', border: '1px solid #1e3a5f' }}
+            />
+            {error && <p className="text-red-400 text-sm">{error}</p>}
           </div>
-        )}
 
-        <p className="text-gray-500 text-xs mt-4">
-          By submitting, you agree to be contacted by Portofino Technologies. No spam, ever.
-        </p>
+          {/* Right — buttons */}
+          {segment !== 'enterprise' && segment !== 'pre-tge' && (
+            <div className="md:w-72 flex flex-col gap-3 justify-center">
+              <button
+                onClick={() => handleSubmit('retainer')}
+                disabled={!!loading}
+                className="w-full py-4 rounded-xl text-white font-semibold text-sm flex items-center justify-center gap-2 transition-opacity hover:opacity-90 disabled:opacity-60"
+                style={{ backgroundColor: '#0099CC' }}
+              >
+                {loading === 'retainer' && <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />}
+                Send me the Report + the indicative Retainer Term Sheet
+              </button>
+              <button
+                onClick={() => handleSubmit('call_option')}
+                disabled={!!loading}
+                className="w-full py-4 rounded-xl text-white font-semibold text-sm flex items-center justify-center gap-2 transition-opacity hover:opacity-90 disabled:opacity-60"
+                style={{ border: '1px solid #0099CC', backgroundColor: 'transparent' }}
+              >
+                {loading === 'call_option' && <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />}
+                Send me the Report + an indicative Call Option Term Sheet
+              </button>
+              <p className="text-gray-500 text-xs text-center">By submitting, you agree to be contacted by Portofino Technologies. No spam, ever.</p>
+            </div>
+          )}
+
+        </div>
       </div>
     </div>
   )
