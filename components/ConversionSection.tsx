@@ -92,34 +92,48 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
       {/* Part A — Retainer Offer */}
       {(segment === 'smb' || segment === 'small') && (
         <div className="rounded-xl p-8" style={{ backgroundColor: '#1E2436' }}>
-          <h2 className="text-white text-2xl font-bold mb-6">Liquidity Without Compromise</h2>
-          <div className="space-y-3 mb-8">
-            {[
-              'Deep two-way order books on your key exchanges',
-              '95% uptime guarantee with monthly reporting',
-              '50% profit share on market making revenues',
-              'You control inventory — we never hold your tokens',
-              'Restricted API only — zero withdrawal rights',
-              'No loan, no options, no complexity',
-              'No hidden fees',
-            ].map((point) => (
-              <div key={point} className="flex items-start gap-3">
-                <span style={{ color: '#0099CC' }} className="mt-0.5 text-lg">✓</span>
-                <span className="text-gray-300">{point}</span>
+          <div className="flex flex-col md:flex-row md:items-start gap-8">
+
+            {/* Left — headline + bullets */}
+            <div className="flex-1">
+              <h2 className="text-white text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>Liquidity Without Compromise</h2>
+              <div className="space-y-3 mb-6">
+                {[
+                  'Deep two-way order books on your key exchanges',
+                  '95% uptime guarantee with monthly reporting',
+                  '50% profit share on market making revenues',
+                  'You control inventory — we never hold your tokens',
+                  'Restricted API only — zero withdrawal rights',
+                  'No loan, no options, no complexity',
+                  'No hidden fees',
+                ].map((point) => (
+                  <div key={point} className="flex items-start gap-3">
+                    <span style={{ color: '#0099CC' }} className="mt-0.5 text-lg">✓</span>
+                    <span className="text-gray-300 text-sm">{point}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+              <p className="text-gray-400 italic text-sm border-l-2 pl-4" style={{ borderColor: '#0099CC' }}>
+                "Liquidity is more than numbers on a screen — it is confidence, credibility, and velocity."
+              </p>
+            </div>
 
-          {/* Fee box */}
-          <div className="rounded-xl p-6 mb-6" style={{ backgroundColor: '#0099CC' }}>
-            <p className="text-white font-bold text-lg">$7,500 / month — first exchange</p>
-            <p className="text-white/80 mt-1">$2,500 / month — each additional exchange</p>
-          </div>
+            {/* Right — pricing */}
+            <div className="md:w-72 flex flex-col gap-4">
+              <div className="rounded-xl p-6" style={{ backgroundColor: '#0099CC' }}>
+                <p className="text-white/70 text-xs uppercase tracking-widest mb-3 font-medium">First exchange</p>
+                <p className="text-white font-bold text-3xl mb-1">$7,500</p>
+                <p className="text-white/80 text-sm">per month</p>
+              </div>
+              <div className="rounded-xl p-6" style={{ backgroundColor: '#162030', border: '1px solid #0099CC44' }}>
+                <p className="text-white/70 text-xs uppercase tracking-widest mb-3 font-medium">Each additional exchange</p>
+                <p className="text-white font-bold text-3xl mb-1">$2,500</p>
+                <p className="text-white/80 text-sm">per month</p>
+              </div>
+              <p className="text-gray-500 text-xs text-center">No lock-in. Cancel anytime.</p>
+            </div>
 
-          {/* Pull quote */}
-          <p className="text-gray-400 italic text-sm border-l-2 pl-4" style={{ borderColor: '#0099CC' }}>
-            "Liquidity is more than numbers on a screen — it is confidence, credibility, and velocity."
-          </p>
+          </div>
         </div>
       )}
 
