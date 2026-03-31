@@ -33,9 +33,9 @@ Distance from ATH: ${tokenData.athChangePercent?.toFixed(2)}%
 Return ONLY a valid JSON array with exactly 3 objects. No markdown, no explanation, just the JSON:
 [
   {
-    "title": "5 words max, punchy problem statement",
-    "insight": "1-2 sentences maximum. State the specific problem with numbers and its commercial consequence. Be direct and sharp.",
-    "portofino": "One short sentence explaining exactly how Portofino can fix this specific issue.",
+    "title": "4 words max. Sharp problem label.",
+    "insight": "One sentence only. One specific number. One commercial consequence. No fluff.",
+    "portofino": "One sentence, max 12 words. What Portofino does to fix this. Start with a verb.",
     "severity": "high" or "medium" or "low"
   }
 ]`,
