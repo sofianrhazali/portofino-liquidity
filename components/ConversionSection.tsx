@@ -99,20 +99,16 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
               <h2 className="text-white text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
                 Build deep, scalable liquidity for your token
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
                 {[
-                  { icon: '📊', text: 'Deep two-way order books on your key exchanges' },
-                  { icon: '✅', text: '95% uptime guarantee with monthly reporting' },
-                  { icon: '🔐', text: 'You control the inventory through sub-accounts directly set up with the exchanges' },
-                  { icon: '🚫', text: 'No loan, no options, no complexity' },
+                  { icon: '⬡', text: 'Deep two-way order books on your key exchanges' },
+                  { icon: '⬡', text: '95% uptime guarantee with monthly reporting' },
+                  { icon: '⬡', text: 'You control the inventory through sub-accounts directly set up with the exchanges' },
+                  { icon: '⬡', text: 'No loan, no options, no complexity' },
                 ].map((item) => (
-                  <div
-                    key={item.text}
-                    className="rounded-xl p-4 flex items-start gap-3"
-                    style={{ backgroundColor: '#161B28', border: '1px solid rgba(0,153,204,0.15)' }}
-                  >
-                    <span className="text-xl mt-0.5">{item.icon}</span>
-                    <span className="text-gray-300 text-sm leading-snug">{item.text}</span>
+                  <div key={item.text} className="flex items-start gap-3">
+                    <div className="mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#0099CC', marginTop: '6px' }} />
+                    <span className="text-gray-300 text-sm leading-relaxed">{item.text}</span>
                   </div>
                 ))}
               </div>
