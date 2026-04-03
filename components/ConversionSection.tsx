@@ -99,15 +99,47 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
               <h2 className="text-white text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
                 Build deep, scalable liquidity for your token
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                 {[
-                  { icon: '⬡', text: 'Deep two-way order books on your key exchanges' },
-                  { icon: '⬡', text: '95% uptime guarantee with monthly reporting' },
-                  { icon: '⬡', text: 'You control the inventory through sub-accounts directly set up with the exchanges' },
-                  { icon: '⬡', text: 'No loan, no options, no complexity' },
+                  {
+                    text: 'Deep two-way order books on your key exchanges',
+                    icon: (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0099CC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                        <polyline points="16 7 22 7 22 13" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    text: '95% uptime guarantee with monthly reporting',
+                    icon: (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0099CC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <polyline points="9 12 11 14 15 10" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    text: 'You keep full control of the inventory through sub-accounts set up by the exchanges',
+                    icon: (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0099CC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    text: 'No loan, no options, no complexity',
+                    icon: (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0099CC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+                      </svg>
+                    ),
+                  },
                 ].map((item) => (
-                  <div key={item.text} className="flex items-start gap-3">
-                    <div className="mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#0099CC', marginTop: '6px' }} />
+                  <div key={item.text} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-0.5">{item.icon}</div>
                     <span className="text-gray-300 text-sm leading-relaxed">{item.text}</span>
                   </div>
                 ))}
