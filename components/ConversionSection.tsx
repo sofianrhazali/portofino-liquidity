@@ -94,28 +94,31 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
         <div className="rounded-xl p-8" style={{ backgroundColor: '#1E2436' }}>
           <div className="flex flex-col md:flex-row md:items-start gap-8">
 
-            {/* Left — headline + bullets */}
+            {/* Left — headline + visual cards */}
             <div className="flex-1">
-              <h2 className="text-white text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>Liquidity Without Compromise</h2>
-              <div className="space-y-3">
+              <h2 className="text-white text-2xl font-bold mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
+                Build deep, scalable liquidity for your token
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  'Deep two-way order books on your key exchanges',
-                  '95% uptime guarantee with monthly reporting',
-                  '50% profit share on market making revenues',
-                  'You control the inventory through sub-accounts directly set up with the exchanges',
-                  'Restricted API only — zero withdrawal rights',
-                  'No loan, no options, no complexity',
-                  'No hidden fees',
-                ].map((point) => (
-                  <div key={point} className="flex items-start gap-3">
-                    <span style={{ color: '#0099CC' }} className="mt-0.5 text-lg">✓</span>
-                    <span className="text-gray-300 text-sm">{point}</span>
+                  { icon: '📊', text: 'Deep two-way order books on your key exchanges' },
+                  { icon: '✅', text: '95% uptime guarantee with monthly reporting' },
+                  { icon: '🔐', text: 'You control the inventory through sub-accounts directly set up with the exchanges' },
+                  { icon: '🚫', text: 'No loan, no options, no complexity' },
+                ].map((item) => (
+                  <div
+                    key={item.text}
+                    className="rounded-xl p-4 flex items-start gap-3"
+                    style={{ backgroundColor: '#161B28', border: '1px solid rgba(0,153,204,0.15)' }}
+                  >
+                    <span className="text-xl mt-0.5">{item.icon}</span>
+                    <span className="text-gray-300 text-sm leading-snug">{item.text}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Right — pricing (single card) */}
+            {/* Right — pricing + profit share */}
             <div className="md:w-56 flex flex-col gap-3">
               <div className="rounded-xl p-6" style={{ backgroundColor: '#0099CC' }}>
                 <p className="text-white/70 text-xs uppercase tracking-widest mb-2 font-medium">First exchange</p>
@@ -125,6 +128,14 @@ export default function ConversionSection({ ticker, tokenData }: Props) {
                   <p className="text-white/70 text-xs mb-1">+ Each additional exchange</p>
                   <p className="text-white font-bold text-lg">$2,500 <span className="text-white/70 text-xs font-normal">/ month</span></p>
                 </div>
+              </div>
+              <div
+                className="rounded-xl p-4 text-center"
+                style={{ backgroundColor: '#161B28', border: '1px solid rgba(0,153,204,0.2)' }}
+              >
+                <p className="text-xs uppercase tracking-widest mb-1 font-medium" style={{ color: '#0099CC' }}>Profit sharing</p>
+                <p className="text-white font-bold text-2xl">50%</p>
+                <p className="text-gray-400 text-xs mt-1">of market making revenues</p>
               </div>
               <p className="text-gray-500 text-xs text-center">No lock-in. Cancel anytime.</p>
             </div>
