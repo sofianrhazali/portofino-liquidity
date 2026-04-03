@@ -30,13 +30,19 @@ MCap Rank: ${tokenData.mcapRank}
 1Y price change: ${tokenData.change1y?.toFixed(2)}%
 Distance from ATH: ${tokenData.athChangePercent?.toFixed(2)}%
 
+Tone rules — strictly follow these:
+- Never use dramatic or alarming language. No words like "catastrophic", "death spiral", "crisis", "collapse", "drought", "dire".
+- Use measured, institutional language. Examples: "Increased Selling Pressure" not "Death Spiral", "Significant Liquidity Gap" not "Catastrophic Liquidity Drought".
+- The audience is a token team, not a retail investor. Be direct and professional.
+
 Return ONLY a valid JSON array with exactly 3 objects. No markdown, no explanation, just the JSON:
 [
   {
-    "title": "4 words max. Sharp problem label.",
-    "insight": "One sentence only. One specific number. One commercial consequence. No fluff.",
-    "portofino": "One sentence, max 12 words. What Portofino does to fix this. Start with a verb.",
-    "severity": "high" or "medium" or "low"
+    "title": "4 words max. Measured, institutional problem label.",
+    "insight": "One sentence only. One specific number. One commercial consequence. No fluff. No dramatic language.",
+    "portofino": "One sentence, max 15 words. Must start with 'By' and follow the format: 'By [specific action], Portofino will [specific outcome for the token].'",
+    "severity": "high" or "medium" or "low",
+    "actionability": "high" or "medium" or "low"
   }
 ]`,
         },
